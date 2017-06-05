@@ -7,6 +7,8 @@
 
 #import "CoreSVP.h"
 #import "UIFont+MHJFont.h"
+#import "UIImage+MHBundleImage.h"
+
 @implementation CoreSVP
 
 
@@ -38,8 +40,8 @@
         [SVProgressHUD dismissWithDelay:duration completion:completeBlock];
          
          
-         UIImage *errorImage = [self getImageWithName:@"SVPError"];
-         UIImage *successImage =[self getImageWithName:@"SVPSuccess"];
+         UIImage *errorImage = [self getBundleImageWithName:@"SVPError"];
+         UIImage *successImage =[self getBundleImageWithName:@"SVPSuccess"];
          if (errorImage) {
              //错误图片
              [SVProgressHUD setErrorImage:errorImage];
@@ -87,19 +89,6 @@
     });
 
 }
-+(UIImage *)getImageWithName:(NSString *)imageName
-{
-    NSBundle *bundle = [NSBundle bundleForClass:self];
-    NSURL *url = [bundle URLForResource:@"CoreSVP" withExtension:@"bundle"];
-    NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-    UIImage *image=[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.png",imageBundle.bundlePath,imageName]];
-    if (image) {
-        return image;
-    }else{
-        return nil;
-    }
-}
-
 /*
  *  进度
  */

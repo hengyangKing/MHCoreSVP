@@ -5,20 +5,20 @@ PODS:
   - KingBaseCategory/UIFont+ (0.2.7):
     - KingBase
     - KingBaseCategory/NSObject+
-  - MHCoreSVP (0.0.1):
+  - MHCoreSVP (0.0.2):
     - KingBaseCategory/UIFont+
     - SVProgressHUD
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
-  - MHCoreSVP
+  - MHCoreSVP (~> 0.0.2)
 
 SPEC CHECKSUMS:
   KingBase: 05672aa84103cd5985874566bd6bf7ff96d4e37e
   KingBaseCategory: 641db1c0d21f855a3c574f02efea621abd2d6ecb
-  MHCoreSVP: f090123c49596a4636e780e7dd7ccb598e7285ce
+  MHCoreSVP: 39638c25523dfc82a7a562edc24dc70fcdd0894d
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 651c10d0d68f76b1430abd3f51e92ea1bf6145e8
+PODFILE CHECKSUM: 7162ff419a14d86557ba334c6cf8b8c52a21685a
 
 COCOAPODS: 1.1.1
