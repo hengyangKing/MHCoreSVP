@@ -40,8 +40,8 @@
         [SVProgressHUD dismissWithDelay:duration completion:completeBlock];
          
          
-         UIImage *errorImage = [self getBundleImageWithName:@"SVPError"];
-         UIImage *successImage =[self getBundleImageWithName:@"SVPSuccess"];
+         UIImage *errorImage = [UIImage getBundleImageWithName:@"SVPError"];
+         UIImage *successImage =[UIImage getBundleImageWithName:@"SVPSuccess"];
          if (errorImage) {
              //错误图片
              [SVProgressHUD setErrorImage:errorImage];
