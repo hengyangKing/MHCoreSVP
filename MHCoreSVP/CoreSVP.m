@@ -39,9 +39,11 @@
          //设置时间和结束回调
         [SVProgressHUD dismissWithDelay:duration completion:completeBlock];
          
+    
+         UIImage *errorImage = [UIImage getBundleImageWithName:@"SVPError" andBundleName:@"CoreSVP"];
          
-         UIImage *errorImage = [UIImage getBundleImageWithName:@"SVPError"];
-         UIImage *successImage =[UIImage getBundleImageWithName:@"SVPSuccess"];
+         UIImage *successImage =[UIImage getBundleImageWithName:@"SVPSuccess" andBundleName:@"CoreSVP"];
+         
          if (errorImage) {
              //错误图片
              [SVProgressHUD setErrorImage:errorImage];
