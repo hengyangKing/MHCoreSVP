@@ -4,18 +4,15 @@
 
 // 如果是调试模式(DEBUG 是调试模式下, 自带的宏)
 #ifdef DEBUG
-#define MHLog(...) NSLog(__VA_ARGS__);
+#define MHJLog(...) NSLog(__VA_ARGS__)
+#define ENV @"Debug"
 #else
-#define MHLog(...)
+#define MHJLog(...)
+#define ENV @"Release"
 #endif
+#define MHJLogFunc MHJLog(@"%s", __func__)
 
-// 打印调用函数的宏
-#define MHLogFunc MHLog(@"%s",__func__);
 
-// 颜色
-#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-#define rgb(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
-#define randomColor rgb(arc4random_uniform(255.0), arc4random_uniform(255.0), arc4random_uniform(255.0))
 
 // 屏幕尺寸相关
 #define kScreenBounds [[UIScreen mainScreen] bounds]

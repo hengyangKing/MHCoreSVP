@@ -6,6 +6,6 @@ source'https://git.coding.net/hengyang_King/MusicHomeSpecs.git'
 source'https://github.com/CocoaPods/Specs.git' 
 target 'MHCoreSVPExample' do
 
-  pod 'MHCoreSVP','../'
+  pod 'MHCoreSVP', :path=>'../'
 
 end

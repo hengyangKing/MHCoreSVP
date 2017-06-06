@@ -15,6 +15,16 @@ typedef NS_ENUM(NSInteger,MHJDeviceType){
     iphone6and6sand7=2,
     iphone6plusandiphone6splusand7plus=3,
 };
+
+//ios系统版本
+
+#define ios8x ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0f) && ([[[UIDevice currentDevice] systemVersion] floatValue] < 9.0f)
+
+#define ios9x ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0f) && ([[[UIDevice currentDevice] systemVersion] floatValue] < 10.0f)
+
+#define ios10x [[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0f
+
+
 @interface NSObject (MHJDeviceTools)
 /**
  *  返回系统号
