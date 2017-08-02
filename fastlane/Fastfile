@@ -41,11 +41,10 @@ podspecName = options[:podspecName]
 
 
 #4  pod spec lint 
-	pod_lib_lint(
-		allow_warnings:true,
-
-		use_libraries:true
-	)
+	#pod_lib_lint(
+	#	allow_warnings:true,
+	#	use_libraries:true
+	#)
 
 # pod repo push XXXXX  xxxx.podspec
 	pod_push(
