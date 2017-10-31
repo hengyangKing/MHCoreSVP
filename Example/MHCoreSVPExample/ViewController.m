@@ -24,7 +24,7 @@
         
     }];
 }
-static CGFloat progress = 0.0;
+//static CGFloat progress = 0.0;
 - (IBAction)showProgress:(id)sender {
     
     

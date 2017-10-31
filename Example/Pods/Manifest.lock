@@ -1,13 +1,8 @@
 PODS:
-  - KingBase (0.0.4):
-    - KingBase/MHTopWindow (= 0.0.4)
-  - KingBase/MHTopWindow (0.0.4)
-  - KingBaseCategory/NSObject+ (0.3.3):
-    - KingBase
-  - KingBaseCategory/UIFont+ (0.3.3):
-    - KingBase
+  - KingBaseCategory/NSObject+ (0.3.8)
+  - KingBaseCategory/UIFont+ (0.3.8):
     - KingBaseCategory/NSObject+
-  - MHCoreSVP (0.0.6):
+  - MHCoreSVP (0.0.7):
     - KingBaseCategory/UIFont+
     - SVProgressHUD
   - SVProgressHUD (2.1.2)
@@ -20,9 +15,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  KingBase: 798276a502bcc0678757d87559203dc8443b2bdd
-  KingBaseCategory: d6b59045c9f0f347ba5b03b1381bc55f95a28ea8
-  MHCoreSVP: aeb5da7ca6ee3c75cf39c9eb8f03358b37124fa8
+  KingBaseCategory: dd0751fd5201bab2786feaf46a33c2a57fbfb3d5
+  MHCoreSVP: 20db764974d2ea3bc93d9400eba7f671292b20d5
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
 PODFILE CHECKSUM: 08678ddb5aae0be90cd38069a325ecb4ebf0c946
