@@ -1,6 +1,6 @@
 {
   "name": "MHCoreSVP",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "summary": "MHCoreSVP.",
   "description": "MHCoreSVP is the musichome point out some message tool",
   "homepage": "https://github.com/hengyangKing/MHCoreSVP",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hengyangKing/MHCoreSVP.git",
-    "tag": "0.0.7"
+    "tag": "0.0.8"
   },
   "source_files": [
     "MHCoreSVP",
