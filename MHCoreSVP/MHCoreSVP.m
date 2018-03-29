@@ -14,9 +14,9 @@
 {
     [CoreSVP dismiss];
 }
-+(void)showMHHUD
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
++(void)showMHHUD {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
         [CoreSVP dismiss];
         [CoreSVP hudSetting];
         [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];

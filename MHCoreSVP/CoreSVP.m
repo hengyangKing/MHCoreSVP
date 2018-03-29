@@ -10,8 +10,6 @@
 //#import "UIImage+MHBundleImage.h"
 
 @implementation CoreSVP
-
-
 /**
  *  展示提示框
  *
@@ -23,35 +21,32 @@
  *  @param completeBlock 提示结束时的回调
  */
 +(void)showSVPWithType:(CoreSVPType)type Msg:(NSString *)msg duration:(CGFloat)duration allowEdit:(BOOL)allowEdit beginBlock:(void(^)(void))beginBlock completeBlock:(void(^)(void))completeBlock{
-    
-
-//    dispatch_async(dispatch_get_main_queue(), ^{
-     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         
-         [self dismiss];
-
+        [self dismiss];
+        
         //基本配置
         [self hudSetting];
         
         if(CoreSVPTypeBottomMsg == type){
             [SVProgressHUD setOffsetFromCenter:UIOffsetMake(0, [UIScreen mainScreen].bounds.size.height * .5f-49.0f)];
         }
-         //设置时间和结束回调
+        //设置时间和结束回调
         [SVProgressHUD dismissWithDelay:duration completion:completeBlock];
-         
-    
-         UIImage *errorImage = [[self class] getBundleImageWithName:@"SVPError" andBundleName:@"CoreSVP"];
-         
-         UIImage *successImage =[[self class] getBundleImageWithName:@"SVPSuccess" andBundleName:@"CoreSVP"];
-         
-         if (errorImage) {
-             //错误图片
-             [SVProgressHUD setErrorImage:errorImage];
-         }
-         if (successImage) {
-             //成功图片
-             [SVProgressHUD setSuccessImage:successImage];
-         }
+        
+        
+        UIImage *errorImage = [[self class] getBundleImageWithName:@"SVPError" andBundleName:@"CoreSVP"];
+        
+        UIImage *successImage =[[self class] getBundleImageWithName:@"SVPSuccess" andBundleName:@"CoreSVP"];
+        
+        if (errorImage) {
+            //错误图片
+            [SVProgressHUD setErrorImage:errorImage];
+        }
+        if (successImage) {
+            //成功图片
+            [SVProgressHUD setSuccessImage:successImage];
+        }
         
         
         SVProgressHUDMaskType maskType=allowEdit?SVProgressHUDMaskTypeNone:SVProgressHUDMaskTypeClear;
@@ -89,7 +84,6 @@
             }
         });
     });
-
 }
 /*
  *  进度
@@ -97,9 +91,7 @@
 +(void)showProgess:(CGFloat)progress Msg:(NSString *)msg maskType:(SVProgressHUDMaskType)maskType{
     
     if (progress<=0) progress = 0;
-    
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         //基本配置
         [self hudSetting];
         [SVProgressHUD showProgress:progress status:msg];
@@ -121,7 +113,6 @@
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
 
-    
     //设置背景色
     [SVProgressHUD setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.68]];
     
@@ -131,8 +122,6 @@
     //字体大小
     [SVProgressHUD setFont:[UIFont MHFont:16]];
 }
-
-
 /**
  *  隐藏提示框
  */
@@ -156,11 +145,4 @@
     return [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.png",imageBundle.bundlePath,imageName]];
     
 }
-
-
-
-
-
-
-
 @end
